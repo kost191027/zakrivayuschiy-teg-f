@@ -83,6 +83,7 @@
   padding-block-end: 6px;
   font-size: inherit;
   font-variation-settings: 'wght' var(--font-weight-bold);
+  border-bottom: var(--element-border);
 }
 
 .card__picture {
@@ -95,6 +96,7 @@
   object-position: center;
   aspect-ratio: 1 / 1;
   image-rendering: -webkit-optimize-contrast;
+  border-bottom: var(--element-border);
 }
 
 .card__image_brightness {
@@ -106,11 +108,11 @@
 }
 
 .card__image_blur {
-  filter: blur(6px);
+  filter: blur(2px);
 }
 
 .card__image_multi {
-  filter: sepia(0.5) invert(0.68) brightness(150%);
+  filter: sepia(0.5) invert(0.38) brightness(150%);
 }
 
 .card__image_grayscale {
@@ -185,7 +187,7 @@
   font-size: var(--button-font-size);
   line-height: var(--button-line-height);
   background: var(--block-background-color);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .button:hover {
@@ -232,8 +234,19 @@
   outline-color: currentColor;
 }
 
+.card__icon-button:focus-visible .like-icon {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  transition: 0.3s ease;
+  /* появляется рамка на иконке сердца в режиме focus-visible */
+}
+
 .like-icon {
+  display: block;
+  width: 39px;
+  height: 30px;
   cursor: pointer;
+  /* добавлены фиксированные размеры иконки для соответствия заданию: высота блока должна быть такой же, как у кнопки справа */
 }
 
 .card__like-button {
@@ -246,7 +259,9 @@
   position: relative;
   z-index: 1;
   color: var(--button-text-color);
-  mix-blend-mode: difference;
+  mix-blend-mode: difference; 
+  /* mix-blend-mode использован. текст не пропадаает при смене цвета. добавлен transition для плавности*/
+  transition: 0.3s ease;
 }
 
 .button_type_save {
@@ -311,7 +326,7 @@ dialog::backdrop {
   inline-size: 100%;
 }
 
-@media (max-width <= 375px) {
+@media (width <= 375px) {
   .card__label {
     inset-inline-end: 11px;
   }

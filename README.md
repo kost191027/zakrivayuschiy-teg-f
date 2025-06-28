@@ -10,5 +10,7 @@
 6. Анимация иконки Like.
 7. Модальное окно.
 8. Использовались изображения с сайта https://www.freepik.com. Некоммерческая лицензия. Free to use.
-9. Обработка изображений с помощью CSS-свойств.
-Ссылка на репозиторий: https://github.com/kost191027/zakrivayuschiy-teg-f
+9. Обработка изображений с помощью CSS-свойств.   
+*	*  **
+Ссылка на репозиторий: https://github.com/kost191027/zakrivayuschiy-teg-f     
+Ссылка на сайт (ghpages): https://kost191027.github.io/zakrivayuschiy-teg-f/
